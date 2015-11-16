@@ -5,4 +5,7 @@
     <string name="activity">ACTIVITY</string>
     <string name="settings">SETTINGS</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_feed">Feed</string>
+    <string name="title_activity_activity">activity</string>
+    <string name="title_activity_settings">Settings</string>
 </resources>

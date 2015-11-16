@@ -2,6 +2,7 @@ package com.yalantis.guillotine.sample.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
@@ -15,10 +16,8 @@ import com.yalantis.guillotine.sample.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-/**
- * Created by Dmytro Denysenko on 5/4/15.
- */
-public class MainActivity extends AppCompatActivity {
+public class Profile extends AppCompatActivity {
+
     LinearLayout prof;
     LinearLayout feed;
     LinearLayout activity;
@@ -64,8 +63,8 @@ public class MainActivity extends AppCompatActivity {
         prof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(MainActivity.this,Profile.class);
-                    startActivity(b);
+                Intent b = new Intent(Profile.this,Profile.class);
+                startActivity(b);
 
 
 
@@ -75,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         feed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent c = new Intent(MainActivity.this,Feed.class);
+                Intent c = new Intent(Profile.this,Feed.class);
                 startActivity(c);
 
             }
@@ -83,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
         activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent d = new Intent(MainActivity.this, Activity.class);
+                Intent d = new Intent(Profile.this, Activity.class);
                 startActivity(d);
 
             }
@@ -91,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e = new Intent(MainActivity.this,Settings.class);
+                Intent e = new Intent(Profile.this, Settings.class);
                 startActivity(e);
 
             }
@@ -99,4 +98,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }

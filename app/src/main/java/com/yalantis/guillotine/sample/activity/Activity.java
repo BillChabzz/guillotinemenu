@@ -15,10 +15,8 @@ import com.yalantis.guillotine.sample.R;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 
-/**
- * Created by Dmytro Denysenko on 5/4/15.
- */
-public class MainActivity extends AppCompatActivity {
+public class Activity extends AppCompatActivity {
+
     LinearLayout prof;
     LinearLayout feed;
     LinearLayout activity;
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.profile);
+        setContentView(R.layout.activity);
         ButterKnife.inject(this);
 
 
@@ -64,10 +62,8 @@ public class MainActivity extends AppCompatActivity {
         prof.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent b = new Intent(MainActivity.this,Profile.class);
-                    startActivity(b);
-
-
+                Intent b = new Intent(Activity.this, Profile.class);
+                startActivity(b);
 
 
             }
@@ -75,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         feed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent c = new Intent(MainActivity.this,Feed.class);
+                Intent c = new Intent(Activity.this,Feed.class);
                 startActivity(c);
 
             }
@@ -83,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent d = new Intent(MainActivity.this, Activity.class);
+                Intent d = new Intent(Activity.this, Activity.class);
                 startActivity(d);
 
             }
@@ -91,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent e = new Intent(MainActivity.this,Settings.class);
+                Intent e = new Intent(Activity.this,Settings.class);
                 startActivity(e);
 
             }
@@ -99,4 +95,5 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
 }
